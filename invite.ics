@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Partner Event Activation Team//Leadership Event//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:monster-ccep-leadership-2026@partner-events
+DTSTAMP:20260929T090000Z
+DTSTART;VALUE=DATE:20261027
+DTEND;VALUE=DATE:20261028
+SUMMARY:Monster Energy x Coca-Cola Europacific Partners Leadership Event
+LOCATION:Hilton Woking\, Church Street West\, Woking GU21 6AX
+DESCRIPTION:Doors open from 11:00am. This is an overnight event. Full programme timings will be shared ahead of the event.
+END:VEVENT
+END:VCALENDAR

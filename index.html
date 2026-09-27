@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Monster Energy x Coca-Cola Europacific Partners Leadership Event</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#060606;--panel:#121212;--line:#2a2a2a;--green:#8DC63F;--text:#ffffff;--muted:#b5b5b5;--head:Impact,'Anton','Arial Narrow',Arial,sans-serif;--body:Arial,Helvetica,sans-serif;}
+*{box-sizing:border-box}
+html,body{margin:0;background:#000;color:var(--text);font-family:var(--body);-webkit-font-smoothing:antialiased}
+.wrap{max-width:640px;margin:0 auto;background:var(--bg);min-height:100vh;padding-bottom:env(safe-area-inset-bottom,0px)}
+.update{display:none;background:#b3261e;color:#fff;padding:14px 20px;font-size:14px;line-height:20px}
+.update.on{display:block}
+.update strong{font-family:var(--head);font-weight:normal;letter-spacing:1px;font-size:17px;display:block;margin-bottom:4px}
+.update a{color:#fff;font-weight:bold}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;border-bottom:1px solid var(--line);font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+.topbar b{color:var(--green)}
+.hero img{display:block;width:100%;height:auto}
+.title{text-align:center;padding:4px 24px 0}
+.title h1{font-family:var(--head);font-weight:normal;text-transform:uppercase;font-size:34px;line-height:40px;margin:0;letter-spacing:.5px}
+.title .sub{color:var(--green);font-weight:bold;letter-spacing:2px;text-transform:uppercase;font-size:13px;margin-top:8px}
+.count{margin:22px auto 0;text-align:center}
+.count .num{font-family:var(--head);font-size:56px;line-height:56px;color:var(--green)}
+.count .lbl{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-top:6px}
+section{display:none;padding:26px 24px 10px}
+section.show{display:block}
+.label{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--green);font-weight:bold;margin:0 0 10px}
+p{font-size:16px;line-height:25px;margin:0 0 16px}
+.facts{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:22px 0;padding:6px 0}
+.fact{display:flex;gap:16px;padding:12px 0}
+.fact+.fact{border-top:1px solid var(--line)}
+.fact .k{min-width:96px;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.fact .v{font-size:16px;line-height:23px;font-weight:bold}
+.fact .v span{display:block;font-weight:normal;color:var(--muted);font-size:15px}
+.btn{display:block;width:100%;text-align:center;padding:16px 18px;border-radius:4px;font-family:var(--body);font-weight:bold;letter-spacing:1px;text-transform:uppercase;font-size:15px;text-decoration:none;cursor:pointer;border:2px solid var(--green);margin:0 0 12px}
+.btn.primary{background:var(--green);color:#000}
+.btn.ghost{background:transparent;color:var(--green)}
+.btn.grey{background:transparent;color:#ccc;border-color:#666}
+.deadline{text-align:center;font-size:14px;color:var(--muted);margin:6px 0 10px}
+.deadline b{color:#fff}
+.block{border-top:1px solid var(--line);padding:22px 0 6px}
+.block:first-of-type{border-top:0;padding-top:0}
+.block h2{font-family:var(--head);font-weight:normal;text-transform:uppercase;font-size:24px;letter-spacing:.5px;margin:0 0 10px}
+ul.day{list-style:none;padding:0;margin:0 0 16px}
+ul.day li{padding:9px 0 9px 22px;position:relative;font-size:16px;border-bottom:1px solid var(--line)}
+ul.day li:before{content:"";position:absolute;left:2px;top:15px;width:9px;height:9px;border-radius:50%;background:var(--green)}
+.note{background:var(--panel);border-left:3px solid var(--green);padding:14px 16px;border-radius:2px;margin:0 0 16px;font-size:15px;line-height:23px}
+.note.alert{border-left-color:#e0413a}
+a.mail{color:var(--green)}
+.team{background:var(--panel);padding:18px;border-radius:6px;margin-bottom:16px}
+.teamtop{display:flex;gap:18px;align-items:center}
+.teammail{display:block;margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:15px}
+.team img{width:88px;height:88px;border-radius:50%;flex:none;border:2px solid var(--green)}
+.team .n{font-family:var(--head);font-size:22px;text-transform:uppercase;letter-spacing:.5px}
+.team .r{color:var(--muted);font-size:14px;line-height:20px;min-width:0}
+.team .r a{word-break:normal}
+form .q{margin:0 0 22px}
+form .q .t{font-size:16px;font-weight:bold;line-height:23px;margin-bottom:10px}
+.opts{display:flex;flex-wrap:wrap;gap:10px}
+.opt input{position:absolute;opacity:0;pointer-events:none}
+.opt span{display:inline-block;padding:12px 16px;border:2px solid #555;border-radius:4px;font-size:15px;cursor:pointer;color:#ddd}
+.opt input:checked+span{border-color:var(--green);background:var(--green);color:#000;font-weight:bold}
+textarea{width:100%;min-height:74px;background:var(--panel);border:2px solid #444;border-radius:4px;color:#fff;font-family:var(--body);font-size:15px;padding:12px}
+textarea:focus{outline:none;border-color:var(--green)}
+.err{display:none;color:#ff6b61;font-size:14px;margin:-6px 0 16px}
+.big{font-family:var(--head);font-weight:normal;text-transform:uppercase;font-size:40px;line-height:46px;margin:0 0 14px}
+.egg{margin-top:26px;color:var(--muted);font-size:15px;font-style:italic}
+footer{border-top:1px solid var(--line);margin-top:26px;padding:20px 24px 34px;text-align:center;font-size:12px;line-height:19px;color:#8f8f8f}
+footer b{color:#ccc}
+footer a{color:var(--green)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="update" id="update" role="status">
+  <strong>&#9888; Travel update</strong>
+  A major rail strike has been announced for Tuesday 27 October. If you selected train travel during registration, S &amp; N Pickford Reservations will contact you regarding alternative travel arrangements. <a href="#" data-go="info" data-anchor="travel">View travel information</a>
+</div>
+
+<div class="topbar"><span>Event platform</span><b id="topcount"></b></div>
+<div class="hero"><img src="hero.jpg" alt="Monster Energy x Coca-Cola Europacific Partners"></div>
+<div class="title">
+  <h1>Leadership Event 2026</h1>
+  <div class="sub">Monster Energy x Coca-Cola Europacific Partners</div>
+</div>
+<div class="count"><div class="num" id="countnum">&nbsp;</div><div class="lbl" id="countlbl">Days to go</div></div>
+
+<!-- HOME -->
+<section id="home" class="show">
+  <div class="label">Invitation</div>
+  <p>Dear Chlo&eacute; and Holly,</p>
+  <p>We invite you to attend the Monster Energy x Coca-Cola Europacific Partners Leadership Event.</p>
+  <p>Please RSVP as soon as possible to confirm your presence.</p>
+  <div class="facts">
+    <div class="fact"><div class="k">Location</div><div class="v">Hilton Woking<span>Church Street West, Woking GU21 6AX</span></div></div>
+    <div class="fact"><div class="k">Date</div><div class="v">Tuesday 27 October 2026</div></div>
+    <div class="fact"><div class="k">Arrival</div><div class="v">Doors open from 11:00am</div></div>
+  </div>
+  <a class="btn primary" href="#" data-go="rsvp">Submit your RSVP</a>
+  <a class="btn ghost" href="#" data-go="info">Event information</a>
+  <a class="btn grey" href="invite.ics" download>Add event to calendar</a>
+  <div class="deadline">Registration closes: <b>4pm on Friday 9 October 2026</b></div>
+</section>
+
+<!-- INFO -->
+<section id="info">
+  <div class="label">Event information</div>
+
+  <div class="block">
+    <h2>Your day</h2>
+    <p>Doors open from 11:00am. Join us for welcome drinks and introductions before the Leadership Event gets underway.</p>
+    <p>Throughout the day you can expect:</p>
+    <ul class="day">
+      <li>Welcome reception</li>
+      <li>Leadership keynote and panel discussion</li>
+      <li>Working lunch</li>
+      <li>Networking and breakout sessions</li>
+      <li>Dinner and evening entertainment</li>
+    </ul>
+    <p>Full programme timings will be available here ahead of the event.</p>
+  </div>
+
+  <div class="block">
+    <h2>Venue</h2>
+    <p><b>Hilton Woking</b><br>Church Street West, Woking GU21 6AX</p>
+    <p>Further arrival and venue information will be available here ahead of the event.</p>
+  </div>
+
+  <div class="block">
+    <h2>Accommodation</h2>
+    <p>Please be advised that this is an overnight event. If you require overnight accommodation, please let us know when completing your RSVP.</p>
+    <p>Hotel check-in opens from 3:00pm. Guests arriving before check-in will receive information about luggage arrangements before travelling.</p>
+  </div>
+
+  <div class="block" id="travel">
+    <h2>Travel</h2>
+    <div class="note alert" id="travelupdate" style="display:none"><b>Travel update:</b> A major rail strike has been announced for Tuesday 27 October. If you selected train travel during registration, S &amp; N Pickford Reservations will contact you regarding alternative travel arrangements. If your travel plans have changed since registering, please contact the Partner Event Activation Team.</div>
+    <p>Our appointed travel partner, S &amp; N Pickford Reservations, will contact you individually following registration to assist with your travel and overnight accommodation arrangements.</p>
+    <div class="note">Please look out for an email from <a class="mail" href="mailto:res@snpickford.co.uk">res@snpickford.co.uk</a>.<br>If you haven&rsquo;t heard from S &amp; N Pickford Reservations within three working days of registering, please contact the Partner Event Activation Team.</div>
+    <p>When completing your RSVP, we&rsquo;ll ask how you currently expect to travel, so arrangements can be coordinated in advance. If you don&rsquo;t require travel assistance or overnight accommodation, please let S &amp; N Pickford Reservations know when they contact you.</p>
+    <p>Further travel, arrival and parking information will be available here as arrangements are confirmed.</p>
+  </div>
+
+  <div class="block">
+    <h2>What to wear</h2>
+    <p>There is no formal dress code for this event. The programme will involve movement between different spaces throughout the day, so please wear whatever you feel comfortable in. Comfortable footwear is recommended.</p>
+  </div>
+
+  <div class="block">
+    <h2>Dietary &amp; accessibility</h2>
+    <p>Please tell us about any dietary or accessibility requirements when completing your RSVP, so these can be factored into the event arrangements. If your requirements change after registering, please contact the Partner Event Activation Team.</p>
+  </div>
+
+  <div class="block">
+    <h2>Meet the team</h2>
+    <div class="team">
+      <div class="teamtop">
+        <img src="nath.png" alt="Nath Sturridge">
+        <div><div class="n">Nath Sturridge</div><div class="r">Partner Events Executive<br>Monster Energy</div></div>
+      </div>
+      <a class="mail teammail" href="mailto:nathan.sturridge@monsterenergy.com">nathan.sturridge@monsterenergy.com</a>
+    </div>
+    <p>Questions before the event? Please don&rsquo;t hesitate to get in touch.</p>
+  </div>
+
+  <a class="btn primary" href="#" data-go="rsvp">Submit your RSVP</a>
+  <a class="btn ghost" href="#" data-go="home">Back to invitation</a>
+</section>
+
+<!-- RSVP -->
+<section id="rsvp">
+  <div class="label">RSVP</div>
+  <h2 class="big" style="font-size:32px;line-height:38px">Let&rsquo;s get you registered</h2>
+  <form id="form" novalidate>
+    <div class="q"><div class="t">Who are you?</div>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="who" value="Chlo&eacute;"><span>Chlo&eacute;</span></label>
+        <label class="opt"><input type="radio" name="who" value="Holly"><span>Holly</span></label>
+      </div></div>
+    <div class="q"><div class="t">Will you be attending the Leadership Event?</div>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="attend" value="yes"><span>Yes, I&rsquo;ll be there</span></label>
+        <label class="opt"><input type="radio" name="attend" value="no"><span>No, I&rsquo;m unable to attend</span></label>
+      </div></div>
+    <div id="yesfields" style="display:none">
+      <div class="q"><div class="t">Do you require overnight accommodation?</div>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="acc" value="yes"><span>Yes</span></label>
+          <label class="opt"><input type="radio" name="acc" value="no"><span>No</span></label>
+        </div></div>
+      <div class="q"><div class="t">How do you currently expect to travel?</div>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="travel" value="train"><span>Train</span></label>
+          <label class="opt"><input type="radio" name="travel" value="car"><span>Car</span></label>
+          <label class="opt"><input type="radio" name="travel" value="air"><span>Air</span></label>
+          <label class="opt"><input type="radio" name="travel" value="unsure"><span>I&rsquo;m not sure yet</span></label>
+        </div></div>
+      <div class="q"><div class="t">Do you have any dietary requirements?</div><textarea name="diet" placeholder="Let us know here"></textarea></div>
+      <div class="q"><div class="t">Do you have any accessibility requirements we should be aware of?</div><textarea name="access" placeholder="Let us know here"></textarea></div>
+    </div>
+    <div class="err" id="err">Please tell us who you are and whether you&rsquo;ll be attending.</div>
+    <button class="btn primary" type="submit">Submit your RSVP</button>
+    <a class="btn ghost" href="#" data-go="home">Back to invitation</a>
+  </form>
+</section>
+
+<!-- YES -->
+<section id="yes">
+  <div class="label">RSVP received</div>
+  <h2 class="big">You&rsquo;re all set, <span class="nm"></span>.</h2>
+  <p>Thank you. Your RSVP has been received.</p>
+  <p>We&rsquo;ll keep this event platform updated with the latest information as we get closer to the Leadership Event.</p>
+  <div class="block">
+    <h2>What happens next?</h2>
+    <p>S &amp; N Pickford Reservations will contact you regarding your travel and accommodation arrangements where required.</p>
+    <p>We&rsquo;ll continue to update this platform with programme, venue and joining information ahead of the event.</p>
+  </div>
+  <a class="btn ghost" href="#" data-go="info">Return to event information</a>
+  <p class="egg" id="egg" style="display:none">And yes, Ultra White is on the stock order.</p>
+</section>
+
+<!-- NO -->
+<section id="no">
+  <div class="label">Response received</div>
+  <h2 class="big">Sorry you can&rsquo;t make it, <span class="nm"></span>.</h2>
+  <p>Thank you for letting us know.</p>
+  <p>Your response has been received and will help us keep our event arrangements and guest information up to date.</p>
+  <a class="btn ghost" href="#" data-go="info">Return to event information</a>
+</section>
+
+<footer>
+  <b>Partner Event Activation Team</b> | Monster Energy<br>
+  Please refer to our Privacy Notice for information on how we process your personal data.
+</footer>
+</div>
+
+<script>
+(function(){
+  // live countdown to Tuesday 27 October 2026
+  var ev=new Date(2026,9,27), t=new Date(); t.setHours(0,0,0,0);
+  var d=Math.round((ev-t)/86400000), num=document.getElementById('countnum'), lbl=document.getElementById('countlbl'), top=document.getElementById('topcount');
+  if(d>1){num.textContent=d;lbl.textContent='Days to go';top.textContent=d+' days to go';}
+  else if(d===1){num.textContent='1';lbl.textContent='Day to go';top.textContent='1 day to go';}
+  else if(d===0){num.textContent='Today';lbl.textContent='See you there';top.textContent='Event day';}
+  else{num.textContent='Thank you';lbl.textContent='for joining us';top.textContent='';}
+
+  // later-state travel update: add ?update to the address
+  if(new URLSearchParams(location.search).has('update')){document.getElementById('update').classList.add('on');document.getElementById('travelupdate').style.display='block';}
+
+  function go(id,anchor){
+    document.querySelectorAll('section').forEach(function(s){s.classList.toggle('show',s.id===id);});
+    if(anchor){var a=document.getElementById(anchor); if(a){setTimeout(function(){a.scrollIntoView({behavior:'smooth'});},50);return;}}
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+  document.addEventListener('click',function(e){var el=e.target.closest('[data-go]'); if(!el)return; e.preventDefault(); go(el.getAttribute('data-go'),el.getAttribute('data-anchor'));});
+
+  var form=document.getElementById('form');
+  form.addEventListener('change',function(){var a=form.querySelector('input[name=attend]:checked'); document.getElementById('yesfields').style.display=(a&&a.value==='yes')?'block':'none';});
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var w=form.querySelector('input[name=who]:checked'), a=form.querySelector('input[name=attend]:checked');
+    if(!w||!a){document.getElementById('err').style.display='block';return;}
+    document.getElementById('err').style.display='none';
+    document.querySelectorAll('.nm').forEach(function(n){n.textContent=w.value;});
+    document.getElementById('egg').style.display=(a.value==='yes'&&w.value==='Holly')?'block':'none';
+    go(a.value==='yes'?'yes':'no');
+  });
+})();
+</script>
+</body>
+</html>
